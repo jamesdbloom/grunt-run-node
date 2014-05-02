@@ -48,6 +48,10 @@ module.exports = function (grunt) {
             }
         },
 
+        stop_node: {
+
+        },
+
         // Unit tests.
         nodeunit: {
             tests: ['test/*_test.js']

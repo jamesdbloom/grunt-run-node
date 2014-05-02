@@ -20,7 +20,7 @@ grunt.loadNpmTasks('grunt-run-node');
 ## The "run_node" task
 
 ### Overview
-In your project's Gruntfile, add a section named `run_node` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `run_node` to the data object passed into `grunt.initConfig()` to start one or more node servers asynchronously.  To stop previously started node servers use the `stop_node` task.
 
 ```js
 grunt.initConfig({
@@ -36,6 +36,9 @@ grunt.initConfig({
             },
             files: 'test_server.js'
         }
+    },
+    stop_node: {
+
     }
 });
 ```

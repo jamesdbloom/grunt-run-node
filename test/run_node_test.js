@@ -33,7 +33,6 @@ exports.run_node = {
         test.expect(1);
         ps = exec('ps -ef | grep node',
             function (error, stdout, stderr) {
-                debugger;
                 test.equal(stdout, "foo bar", 'check node process is currently running');
                 console.log('stdout: ' + stdout);
                 console.log('stderr: ' + stderr);
@@ -44,7 +43,6 @@ exports.run_node = {
         ps.on('exit', function (code) {
             exec('pkill -INT -f node',
                 function (error, stdout, stderr) {
-                    debugger;
                     console.log('stdout: ' + stdout);
                     console.log('stderr: ' + stderr);
                     if (error !== null) {
@@ -62,7 +60,6 @@ exports.run_node = {
         test.expect(1);
         ps = exec('ps -ef | grep node',
             function (error, stdout, stderr) {
-                debugger;
                 test.equal(stdout, "foo bar", 'check node process is currently running');
                 console.log('stdout: ' + stdout);
                 console.log('stderr: ' + stderr);
@@ -73,7 +70,6 @@ exports.run_node = {
         ps.on('exit', function (code) {
             pkill = exec('pkill -INT -f node',
                 function (error, stdout, stderr) {
-                    debugger;
                     console.log('stdout: ' + stdout);
                     console.log('stderr: ' + stderr);
                     if (error !== null) {
