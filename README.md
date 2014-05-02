@@ -44,12 +44,14 @@ grunt.initConfig({
 
 #### options.cwd
 Type: `String`
+
 Default value: `process.cwd()`
 
 Used to set the current working directory for the executing node processes.
 
 #### options.stdio
 Type: `String`
+
 Default value: `[ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ]`
 
 The `stdio` option is an array where each index corresponds to a stream in the node process.
@@ -71,12 +73,14 @@ As a shorthand, the stdio argument may also be one of the following strings, rat
 
 #### options.env
 Type: `Object`
+
 Default value: `{}`
 
 Env can be used to specify environment key-value variables that will be visible to the new process.
 
 #### options.detached
 Type: `Boolean`
+
 Default value: `false`
 
 If the detached option is set, the child process will be made the leader of a new process group. This makes it possible for the child to continue running after the parent exits.
