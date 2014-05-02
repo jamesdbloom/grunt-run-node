@@ -29,12 +29,11 @@ exports.run_node = {
     },
     default_options: function (test) {
         var exec = require('child_process').exec,
-            child;
-
+            ps, pkill;
         test.expect(1);
-
-        child = exec('ps -ef | grep node',
+        ps = exec('ps -ef | grep node',
             function (error, stdout, stderr) {
+                debugger;
                 test.equal(stdout, "foo bar", 'check node process is currently running');
                 console.log('stdout: ' + stdout);
                 console.log('stderr: ' + stderr);
@@ -42,26 +41,28 @@ exports.run_node = {
                     console.log('exec error: ' + error);
                 }
             });
-
-        exec('pkill -INT -f node',
-            function (error, stdout, stderr) {
-                console.log('stdout: ' + stdout);
-                console.log('stderr: ' + stderr);
-                if (error !== null) {
-                    console.log('exec error: ' + error);
-                }
+        ps.on('exit', function (code) {
+            exec('pkill -INT -f node',
+                function (error, stdout, stderr) {
+                    debugger;
+                    console.log('stdout: ' + stdout);
+                    console.log('stderr: ' + stderr);
+                    if (error !== null) {
+                        console.log('exec error: ' + error);
+                    }
+                });
+            ps.on('exit', function (code) {
+                test.done();
             });
-
-        test.done();
+        });
     },
     custom_options: function (test) {
         var exec = require('child_process').exec,
-            child;
-
+            ps, pkill;
         test.expect(1);
-
-        child = exec('ps -ef | grep node',
+        ps = exec('ps -ef | grep node',
             function (error, stdout, stderr) {
+                debugger;
                 test.equal(stdout, "foo bar", 'check node process is currently running');
                 console.log('stdout: ' + stdout);
                 console.log('stderr: ' + stderr);
@@ -69,16 +70,19 @@ exports.run_node = {
                     console.log('exec error: ' + error);
                 }
             });
-
-        exec('pkill -INT -f node',
-            function (error, stdout, stderr) {
-                console.log('stdout: ' + stdout);
-                console.log('stderr: ' + stderr);
-                if (error !== null) {
-                    console.log('exec error: ' + error);
-                }
+        ps.on('exit', function (code) {
+            pkill = exec('pkill -INT -f node',
+                function (error, stdout, stderr) {
+                    debugger;
+                    console.log('stdout: ' + stdout);
+                    console.log('stderr: ' + stderr);
+                    if (error !== null) {
+                        console.log('exec error: ' + error);
+                    }
+                });
+            ps.on('exit', function (code) {
+                test.done();
             });
-
-        test.done();
+        });
     }
 };

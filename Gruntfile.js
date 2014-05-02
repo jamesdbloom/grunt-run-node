@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             default_options: {
                 options: {
                 },
-                files: ['test/test_server.js']
+                files: 'test/test_server.js'
             },
             custom_options: {
                 options: {
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
                     },
                     detached: true
                 },
-                files: ['test_server.js']
+                files: 'test_server.js'
             }
         },
 

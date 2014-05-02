@@ -24,63 +24,61 @@ In your project's Gruntfile, add a section named `run_node` to the data object p
 
 ```js
 grunt.initConfig({
-  run_node: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    run_node: {
+        start: {
+            options: {
+                cwd: 'test',
+                stdio: [ 'ignore', 'ignore', 'ignore' ],
+                env: {
+                    'foo': 'bar'
+                },
+                detached: true
+            },
+            files: 'test_server.js'
+        }
+    }
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.cwd
 Type: `String`
-Default value: `',  '`
+Default value: `process.cwd()`
 
-A string value that is used to do something with whatever.
+Used to set the current working directory for the executing node processes.
 
-#### options.punctuation
+#### options.stdio
 Type: `String`
-Default value: `'.'`
+Default value: `[ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ]`
 
-A string value that is used to do something else with whatever else.
+The `stdio` option is an array where each index corresponds to a stream in the node process.
 
-### Usage Examples
+The value is one of the following:
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+`pipe` - Create a pipe between the child process and the parent process. The parent end of the pipe is exposed to the parent as a property on the child_process object as ChildProcess.stdio[*file descriptor*]. Pipes created for file descriptors 0 - 2 are also available as ChildProcess.stdin, ChildProcess.stdout and ChildProcess.stderr, respectively.
+`ipc` - Create an IPC channel for passing messages/file descriptors between parent and child. A ChildProcess may have at most one IPC stdio file descriptor. Setting this option enables the ChildProcess.send() method. If the child writes JSON messages to this file descriptor, then this will trigger ChildProcess.on('message'). If the child is a Node.js program, then the presence of an IPC channel will enable process.send() and process.on('message').
+`ignore` - Do not set this file descriptor in the child. Note that Node will always open file descriptor 0 - 2 for the processes it spawns. When any of these is ignored node will open /dev/null and attach it to the child's file descriptor.
+**Stream object** - Share a readable or writable stream that refers to a tty, file, socket, or a pipe with the child process. The stream's underlying file descriptor is duplicated in the child process to the file descriptor that corresponds to the index in the stdio array. Note that the stream must have an underlying descriptor (file streams do not until the 'open' event has occurred).
+**Positive integer** - The integer value is interpreted as a file descriptor that is is currently open in the parent process. It is shared with the child process, similar to how Stream objects can be shared.
+**null** or **undefined** - Use default value. For stdio file descriptors 0, 1 and 2 (in other words, stdin, stdout, and stderr) a pipe is created. For file descriptor 3 and up, the default is 'ignore'.
+As a shorthand, the stdio argument may also be one of the following strings, rather than an array:
 
-```js
-grunt.initConfig({
-  run_node: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+* ignore - ['ignore', 'ignore', 'ignore']
+* pipe - ['pipe', 'pipe', 'pipe']
+* inherit - [process.stdin, process.stdout, process.stderr] or [0,1,2]
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+#### options.env
+Type: `Object`
+Default value: `{}`
 
-```js
-grunt.initConfig({
-  run_node: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+Env can be used to specify environment key-value variables that will be visible to the new process.
+
+#### options.detached
+Type: `Boolean`
+Default value: `false`
+
+If the detached option is set, the child process will be made the leader of a new process group. This makes it possible for the child to continue running after the parent exits.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
