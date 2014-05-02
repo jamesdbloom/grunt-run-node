@@ -1,4 +1,4 @@
-# grunt-run-node
+# grunt-run-node [![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node)
 
 > Start and stop node asynchronously from your grunt build.
 
