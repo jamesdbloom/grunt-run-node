@@ -74,9 +74,9 @@ The value is one of the following:
 
 As a shorthand, the stdio argument may also be one of the following strings, rather than an array:
 
-* ignore - ['ignore', 'ignore', 'ignore']
-* pipe - ['pipe', 'pipe', 'pipe']
-* inherit - [process.stdin, process.stdout, process.stderr] or [0,1,2]
+* `'ignore'` - `['ignore', 'ignore', 'ignore']`
+* `'pipe'` - `['pipe', 'pipe', 'pipe']`
+* `'inherit'` - `[process.stdin, process.stdout, process.stderr]` or `[0,1,2]`
 
 #### options.env
 Type: `Object`
