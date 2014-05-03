@@ -92,7 +92,7 @@ If the detached option is set, the child process will be made the leader of a ne
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+ * 2014-03-05   v0.1.0   Released run_node and stop_node tasks
 
 ---
 
