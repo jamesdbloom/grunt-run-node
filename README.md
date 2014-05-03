@@ -1,4 +1,4 @@
-# grunt-run-node [![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node)
+# grunt-run-node [![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies)
 
 > Start and stop node asynchronously from your grunt build.
 
