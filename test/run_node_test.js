@@ -31,25 +31,21 @@ exports.run_node = {
         var exec = require('child_process').exec,
             ps, pkill;
         test.expect(1);
-        ps = exec('ps -ef | grep node',
+        ps = exec('ps -ef | grep -v grep | grep default_options_server.js | awk \'{ print $8 \" \" $9; }\'',
             function (error, stdout, stderr) {
-                test.equal(stdout, "foo bar", 'check node process is currently running');
-                console.log('stdout: ' + stdout);
-                console.log('stderr: ' + stderr);
+                test.equal(stdout, "node test/helper/default_options_server.js\n", 'check node process is currently running');
                 if (error !== null) {
-                    console.log('exec error: ' + error);
+                    grunt.log.error('exec error: ' + error);
                 }
             });
         ps.on('exit', function (code) {
-            exec('pkill -INT -f node',
+            pkill = exec('pkill -INT -f default_options_server.js',
                 function (error, stdout, stderr) {
-                    console.log('stdout: ' + stdout);
-                    console.log('stderr: ' + stderr);
                     if (error !== null) {
-                        console.log('exec error: ' + error);
+                        grunt.log.error('exec error: ' + error);
                     }
                 });
-            ps.on('exit', function (code) {
+            pkill.on('exit', function (code) {
                 test.done();
             });
         });
@@ -58,25 +54,21 @@ exports.run_node = {
         var exec = require('child_process').exec,
             ps, pkill;
         test.expect(1);
-        ps = exec('ps -ef | grep node',
+        ps = exec('ps -ef | grep -v grep | grep custom_options_server.js | awk \'{ print $8 \" \" $9; }\'',
             function (error, stdout, stderr) {
-                test.equal(stdout, "foo bar", 'check node process is currently running');
-                console.log('stdout: ' + stdout);
-                console.log('stderr: ' + stderr);
+                test.equal(stdout, "node test/helper/custom_options_server.js\n", 'check node process is currently running');
                 if (error !== null) {
-                    console.log('exec error: ' + error);
+                    grunt.log.error('exec error: ' + error);
                 }
             });
         ps.on('exit', function (code) {
-            pkill = exec('pkill -INT -f node',
+            pkill = exec('pkill -INT -f custom_options_server.js',
                 function (error, stdout, stderr) {
-                    console.log('stdout: ' + stdout);
-                    console.log('stderr: ' + stderr);
                     if (error !== null) {
-                        console.log('exec error: ' + error);
+                        grunt.log.error('exec error: ' + error);
                     }
                 });
-            ps.on('exit', function (code) {
+            pkill.on('exit', function (code) {
                 test.done();
             });
         });
