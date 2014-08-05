@@ -18,13 +18,14 @@ module.exports = function (grunt) {
 
         return {
             add: function (command, args, options) {
-                processes.shift(spawn(command, args, options));
+                processes.unshift(spawn(command, args, options));
                 grunt.log.ok("Started " + command + " " + args.join(" "));
             },
             stop_all: function () {
                 for (var i = 0; i < processes.length; i++) {
                     processes[i].kill();
                 }
+                grunt.log.ok('Stopped %s launched node processes', processes.length);
             }
         };
     })(grunt);
