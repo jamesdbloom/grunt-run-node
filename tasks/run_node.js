@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('run_node', 'Start node asynchronously from your grunt build.', function () {
         // mark task as asynchronous
         var done = this.async();
-
+        var opts = this.options();
         this.files.forEach(function (file) {
             file.src.forEach(function (filepath, index, array) {
                 if (!grunt.file.exists(filepath)) {
@@ -40,10 +40,10 @@ module.exports = function (grunt) {
                     done(false);
                 } else {
                     processList.add('node', [filepath], {
-                        cwd: grunt.option('cwd') || process.cwd(),
-                        stdio: grunt.option('stdio') || [ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ],
-                        env: grunt.option('env'),
-                        detached: grunt.option('detached')
+                        cwd: opts.cwd || process.cwd(),
+                        stdio: opts.stdio || [ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ],
+                        env: opts.env,
+                        detached: opts.detached
                     });
                 }
                 // last element
