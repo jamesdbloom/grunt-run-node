@@ -41,11 +41,11 @@ grunt.initConfig({
                 },
                 detached: true
             },
-            files: 'test_server.js'
+            files: { src: [ 'server/server.js'] }
         }
     },
     stop_node: {
-
+        stop: {}
     }
 });
 ```
