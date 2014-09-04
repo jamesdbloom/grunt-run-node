@@ -59,4 +59,8 @@ module.exports = function (grunt) {
         processList.stop_all();
     });
 
+    // Stopp all started node processes on exit
+    process.on('exit', function(code) {
+        processList.stop_all();
+    });
 };
