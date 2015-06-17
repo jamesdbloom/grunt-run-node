@@ -35,12 +35,13 @@ module.exports = function (grunt) {
         // mark task as asynchronous
         var done = this.async();
         var options = this.options({
-            cwd: process.cwd,
-            stdio: [ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ],
+            cwd: process.cwd(),
+            stdio: [],
             env: process.env,
             detached: true
         });
         options.env = extend(process.env, options.env);
+        options.stdio = options.stdio || [ 'ignore', (grunt.option('verbose') ? process.stdout : 'ignore'), process.stderr ];
 
         this.files.forEach(function (file) {
             file.src.forEach(function (filepath, index, array) {
