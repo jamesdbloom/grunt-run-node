@@ -36,7 +36,7 @@ module.exports = function (grunt) {
             },
             custom_options: {
                 options: {
-                    cwd: 'test',
+                    cwd: '.',
                     stdio: [ 'ignore', 'ignore', 'ignore' ],
                     env: {
                         'foo': 'bar'
