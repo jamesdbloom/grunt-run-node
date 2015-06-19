@@ -7,7 +7,7 @@
 
 Grunt task to simplify testing by asynchrounously starting and stopping one or more node servers during the grunt build.  This plugin contains two separate tasks `run_node` and `stop_node`.  `run_node`will typically be used before test to start the system under test and `stop_node` will typically be used once the tests have been completed.
 
-[![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/)
+[![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/) [![wercker status](https://app.wercker.com/status/b12922ace9cd4626e8e0f32364a527eb/m "wercker status")](https://app.wercker.com/project/bykey/b12922ace9cd4626e8e0f32364a527eb)
 
 ## Getting Started
 This plugin requires Grunt `^0.4.5`
