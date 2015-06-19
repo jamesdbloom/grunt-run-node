@@ -1,6 +1,5 @@
 # grunt-run-node 
-[![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamesdbloom/grunt-run-node/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Stories in Backlog](https://badge.waffle.io/jamesdbloom/grunt-run-node.png?label=backlog&title=Backlog)](https://waffle.io/jamesdbloom/grunt-run-node)
+[![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node) [![Stories in Backlog](https://badge.waffle.io/jamesdbloom/grunt-run-node.png?label=backlog&title=Backlog)](https://waffle.io/jamesdbloom/grunt-run-node) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamesdbloom/grunt-run-node/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 > Start and stop node asynchronously from your grunt build.
@@ -105,7 +104,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ---
 
 [James D Bloom](http://blog.jamesdbloom.com)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamesdbloom/grunt-run-node/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
