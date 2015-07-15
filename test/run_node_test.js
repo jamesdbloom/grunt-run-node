@@ -56,7 +56,7 @@ exports.run_node = {
         test.expect(1);
         ps = exec('ps -ef | grep -v grep | grep custom_options_server.js | awk \'{ print $8 \" \" $9; }\'',
             function (error, stdout, stderr) {
-                test.equal(stdout, "node test/helper/custom_options_server.js\n", 'check node process is currently running');
+                test.equal(stdout, "node custom_options_server.js\n", 'check node process is currently running');
                 if (error !== null) {
                     grunt.log.error('exec error: ' + error);
                 }

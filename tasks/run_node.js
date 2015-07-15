@@ -8,6 +8,7 @@
 
 'use strict';
 
+var path = require('path');
 var extend = require('util')._extend;
 var processList;
 
@@ -49,6 +50,10 @@ module.exports = function (grunt) {
                     grunt.log.warn('Source file "' + filepath + '" not found.');
                     done(false);
                 } else {
+                    // amend filepath if cwd is specified
+                    if (options.cwd !== process.cwd()) {
+                        filepath = path.resolve(filepath).replace(path.resolve(options.cwd) + '/', '');
+                    }
                     processList.add('node', [filepath], options);
                 }
                 // last element
