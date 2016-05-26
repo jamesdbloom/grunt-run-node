@@ -101,6 +101,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
  * 2014-03-05   v0.1.0   Released run_node and stop_node tasks
  * 2015-06-19   v0.1.1   Improved options support & updated dependencies
  * 2015-07-30   v0.1.2   Multiple minor tweaks
+ * 2015-07-30   v0.1.3   More minor tweaks and fixes
 
 ---
 
