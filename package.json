@@ -32,7 +32,7 @@
         "grunt-contrib-clean": "~1.0",
         "grunt-contrib-jshint": "~1.0",
         "grunt-contrib-nodeunit": "~1.0",
-        "sleep": "~4.0"
+        "sleep": "~3.0.1"
     },
     "peerDependencies": {
         "grunt": "~1.0"
