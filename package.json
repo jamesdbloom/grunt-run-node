@@ -1,7 +1,7 @@
 {
     "name": "grunt-run-node",
     "description": "Start and stop node asynchronously from your grunt build.",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "homepage": "https://github.com/jamesdbloom/grunt-run-node",
     "author": {
         "name": "James Bloom",

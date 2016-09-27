@@ -104,6 +104,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
  * 2015-07-30   v0.1.2   Multiple minor tweaks
  * 2015-07-30   v0.1.3   More minor tweaks and fixes
  * 2016-07-27   v0.1.4   Updating dependencies
+ * 2016-07-27   v0.1.5   Downgraded version of sleep to fix build
 
 ---
 
