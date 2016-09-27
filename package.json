@@ -15,12 +15,7 @@
     "bugs": {
         "url": "https://github.com/jamesdbloom/grunt-run-node/issues"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/jamesdbloom/grunt-run-node/blob/master/LICENSE-MIT"
-        }
-    ],
+    "license": "Apache-2.0",
     "engines": {
         "node": ">= 0.8.0"
     },
