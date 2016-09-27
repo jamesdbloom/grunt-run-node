@@ -1,15 +1,16 @@
 # grunt-run-node 
-[![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node) [![Stories in Backlog](https://badge.waffle.io/jamesdbloom/grunt-run-node.png?label=backlog&title=Backlog)](https://waffle.io/jamesdbloom/grunt-run-node) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamesdbloom/grunt-run-node/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node) [![Stories in Backlog](https://badge.waffle.io/jamesdbloom/grunt-run-node.png?label=backlog&title=Backlog)](https://waffle.io/jamesdbloom/grunt-run-node)
 
 
 > Start and stop node asynchronously from your grunt build.
 
 Grunt task to simplify testing by asynchrounously starting and stopping one or more node servers during the grunt build.  This plugin contains two separate tasks `run_node` and `stop_node`.  `run_node`will typically be used before test to start the system under test and `stop_node` will typically be used once the tests have been completed.
 
-[![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/) [![wercker status](https://app.wercker.com/status/b12922ace9cd4626e8e0f32364a527eb/m "wercker status")](https://app.wercker.com/project/bykey/b12922ace9cd4626e8e0f32364a527eb)
+<!-- [![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/) -->
+[![wercker status](https://app.wercker.com/status/b12922ace9cd4626e8e0f32364a527eb/m "wercker status")](https://app.wercker.com/project/bykey/b12922ace9cd4626e8e0f32364a527eb)
 
 ## Getting Started
-This plugin requires Grunt `^0.4.5`
+This plugin requires Grunt `^1.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -102,6 +103,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
  * 2015-06-19   v0.1.1   Improved options support & updated dependencies
  * 2015-07-30   v0.1.2   Multiple minor tweaks
  * 2015-07-30   v0.1.3   More minor tweaks and fixes
+ * 2016-07-27   v0.1.4   Updating dependencies
 
 ---
 
