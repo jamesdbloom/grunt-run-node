@@ -1,7 +1,7 @@
 {
     "name": "grunt-run-node",
     "description": "Start and stop node asynchronously from your grunt build.",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "homepage": "https://github.com/jamesdbloom/grunt-run-node",
     "author": {
         "name": "James Bloom",
@@ -23,14 +23,14 @@
         "test": "grunt test"
     },
     "devDependencies": {
-        "grunt": "~1.0",
+        "grunt": "~0.4.0",
         "grunt-contrib-clean": "~1.0",
         "grunt-contrib-jshint": "~1.0",
         "grunt-contrib-nodeunit": "~1.0",
         "sleep": "~3.0.1"
     },
     "peerDependencies": {
-        "grunt": "~1.0"
+        "grunt": ">=0.4.0"
     },
     "keywords": [
         "gruntplugin"
