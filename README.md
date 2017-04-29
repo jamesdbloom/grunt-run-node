@@ -105,6 +105,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
  * 2016-07-27   v0.1.4   Updating dependencies
  * 2016-07-27   v0.1.5   Downgraded version of sleep to fix build
  * 2016-10-09   v0.1.6   Downgrading version of grunt
+ * 2017-04-29   v0.1.7   Updated build & other badges
 
 ---
 

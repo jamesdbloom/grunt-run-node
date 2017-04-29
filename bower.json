@@ -1,0 +1,31 @@
+{
+    "name": "grunt-run-node",
+    "version": "0.1.7",
+    "homepage": "https://github.com/jamesdbloom/grunt-run-node",
+    "authors": [
+        "James Bloom <jamesdbloom@gmail.com>"
+    ],
+    "description": "Node.js module to start and stop executables",
+    "main": [
+        "tasks/run_node.js"
+    ],
+    "keywords": [
+        "gruntplugin",
+        "grunt"
+    ],
+    "license": "Apache",
+    "ignore": [
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        ".*",
+        "Gruntfile.js",
+        "*.iml",
+        "*.yml",
+        "*.jar"
+    ],
+    "moduleType": [
+        "node"
+    ]
+}
