@@ -19,13 +19,10 @@
     "engines": {
         "node": ">= 0.8.0"
     },
-    "scripts": {
-        "test": "grunt test"
-    },
     "devDependencies": {
         "grunt": ">=0.4",
-        "grunt-contrib-clean": "~1.0",
-        "grunt-contrib-jshint": "~1.0",
+        "grunt-contrib-clean": "~1.1",
+        "grunt-contrib-jshint": "~1.1",
         "grunt-contrib-nodeunit": "~1.0",
         "sleep": "~3.0.1"
     },

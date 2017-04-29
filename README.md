@@ -1,13 +1,12 @@
 # grunt-run-node 
-[![Build Status](https://snap-ci.com/jamesdbloom/grunt-run-node/branch/master/build_image)](https://snap-ci.com/jamesdbloom/grunt-run-node/branch/master) [![Build Status](https://secure.travis-ci.org/jamesdbloom/grunt-run-node.png?branch=master)](http://travis-ci.org/jamesdbloom/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node) [![Stories in Backlog](https://badge.waffle.io/jamesdbloom/grunt-run-node.png?label=backlog&title=Backlog)](https://waffle.io/jamesdbloom/grunt-run-node)
 
+[![Build status](https://badge.buildkite.com/ceeff74e5709223c5f087943d4b1afa6b660da95b11737fe8f.svg?style=square&theme=slack)](https://buildkite.com/mockserver/grunt-run-node) [![Dependency Status](https://david-dm.org/jamesdbloom/grunt-run-node.png)](https://david-dm.org/jamesdbloom/grunt-run-node) [![devDependency Status](https://david-dm.org/jamesdbloom/grunt-run-node/dev-status.png)](https://david-dm.org/jamesdbloom/grunt-run-node#info=devDependencies) [![Code Climate](https://codeclimate.com/github/jamesdbloom/grunt-run-node.png)](https://codeclimate.com/github/jamesdbloom/grunt-run-node) 
 
 > Start and stop node asynchronously from your grunt build.
 
 Grunt task to simplify testing by asynchrounously starting and stopping one or more node servers during the grunt build.  This plugin contains two separate tasks `run_node` and `stop_node`.  `run_node`will typically be used before test to start the system under test and `stop_node` will typically be used once the tests have been completed.
 
-<!-- [![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/) -->
-[![wercker status](https://app.wercker.com/status/b12922ace9cd4626e8e0f32364a527eb/m "wercker status")](https://app.wercker.com/project/bykey/b12922ace9cd4626e8e0f32364a527eb)
+[![NPM](https://nodei.co/npm/grunt-run-node.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-run-node/)
 
 ## Getting Started
 This plugin requires Grunt `^1.0`
